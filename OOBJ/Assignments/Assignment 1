@@ -1,0 +1,51 @@
+
+1.
+class Hello2 {
+    int a;
+	char c;
+	double d;
+    byte ch;
+	float f;
+	boolean b;
+	short s;
+	long l;
+	
+public static void main(String args[]){
+     Hello2 h2	= new Hello2();
+     float f1 = 234.5f;
+     double d1=12.65;
+     
+     System.out.println(f1);
+	 System.out.println(h2.a);
+	  System.out.println(h2.c);
+	   System.out.println(h2.d);
+	    System.out.println(h2.ch);
+		 System.out.println(h2.f);
+		  System.out.println(h2.b);
+		  System.out.println(h2.s);
+		  System.out.println(h2.l);
+	 
+}
+}
+
+2.
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+          int i=5;
+        double d =i;
+        System.out.println(d);
+        
+    }
+}
+
+3.
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+          double d=5.25;
+        int i =(int)d;
+        System.out.println(i);
+        
+    }
+}
