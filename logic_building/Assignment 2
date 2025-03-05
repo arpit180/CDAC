@@ -1,1 +1,116 @@
+1.public class GradeClassification {
+    public static void main(String[] args) {
+        int score = 85; // Predefined score
+        char grade;
 
+        if (score >= 90) {
+            grade = 'A';
+        } else if (score >= 80) {
+            grade = 'B';
+        } else if (score >= 70) {
+            grade = 'C';
+        } else if (score >= 60) {
+            grade = 'D';
+        } else {
+            grade = 'F';
+        }
+
+        System.out.println("Grade: " + grade);
+    }
+}
+
+3.import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        double num1 = sc.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = sc.nextDouble();
+        System.out.print("Enter an operator (+, -, *, /): ");
+        char operator = sc.next().charAt(0);
+        double result;
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                } else {
+                    System.out.println("Error! Division by zero.");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Invalid operator");
+                return;
+        }
+        System.out.println("Result: " + result);
+    }
+}
+4.public class DiscountCalculation {
+    public static void main(String[] args) {
+        double purchaseAmount = 1200.0; // Predefined purchase amount
+        boolean hasMembershipCard = true; // Predefined membership card status
+        double discount;
+
+        if (purchaseAmount >= 1000) {
+            discount = 20;
+        } else if (purchaseAmount >= 500) {
+            discount = 10;
+        } else {
+            discount = 5;
+        }
+
+        if (hasMembershipCard) {
+            discount += 5;
+        }
+
+        double finalAmount = purchaseAmount - (purchaseAmount * discount / 100);
+        System.out.println("Final amount after discount: Rs." + finalAmount);
+    }
+}
+
+5.public class StudentPassFail {
+    public static void main(String[] args) {
+        int subject1 = 35; // Predefined grade for subject 1
+        int subject2 = 42; // Predefined grade for subject 2
+        int subject3 = 50; // Predefined grade for subject 3
+        int failCount = 0;
+
+        switch (subject1 > 40 ? "pass" : "fail") {
+            case "fail":
+                failCount++;
+            case "pass":
+                switch (subject2 > 40 ? "pass" : "fail") {
+                    case "fail":
+                        failCount++;
+                    case "pass":
+                        switch (subject3 > 40 ? "pass" : "fail") {
+                            case "fail":
+                                failCount++;
+                            case "pass":
+                                break;
+                        }
+                        break;
+                }
+                break;
+        }
+
+        if (failCount > 0) {
+            System.out.println("Student failed in " + failCount + " subjects.");
+        } else {
+            System.out.println("Student passed.");
+        }
+    }
+}
+6.
