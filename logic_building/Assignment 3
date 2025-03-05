@@ -1,1 +1,268 @@
-
+1.public class SumFirst50 {
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 1; i <= 50; i++) {
+            sum += i;
+        }
+        System.out.println("Sum of the first 50 natural numbers: " + sum);
+    }
+}
+2.public class Factorial10 {
+    public static void main(String[] args) {
+        int fact = 1;
+        for (int i = 1; i <= 10; i++) {
+            fact *= i;
+        }
+        System.out.println("Factorial of 10: " + fact);
+    }
+}
+3.public class MultiplesOf7 {
+    public static void main(String[] args) {
+        for (int i = 7; i <= 100; i += 7) {
+            System.out.print(i + " ");
+        }
+    }
+}
+4.public class ReverseNumber {
+    public static void main(String[] args) {
+        int num = 1234, rev = 0;
+        while (num > 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        System.out.println("Reversed number: " + rev);
+    }
+}
+5.public class Fibonacci {
+    public static void main(String[] args) {
+        int a = 0, b = 1, sum;
+        while (a <= 21) {
+            System.out.print(a + " ");
+            sum = a + b;
+            a = b;
+            b = sum;
+        }
+    }
+}
+6.public class First5Primes {
+    public static void main(String[] args) {
+        int count = 0, num = 2;
+        while (count < 5) {
+            if (isPrime(num)) {
+                System.out.print(num + " ");
+                count++;
+            }
+            num++;
+        }
+    }
+    
+    public static boolean isPrime(int n) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) return false;
+        }
+        return true;
+    }
+}
+7.public class SumOfDigits {
+    public static void main(String[] args) {
+        int num = 9876, sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        System.out.println("Sum of digits: " + sum);
+    }
+}
+8.public class Countdown {
+    public static void main(String[] args) {
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+        }
+    }
+}
+9.public class LargestDigit {
+    public static void main(String[] args) {
+        int num = 4825, max = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            if (digit > max) max = digit;
+            num /= 10;
+        }
+        System.out.println("Largest digit: " + max);
+    }
+}
+10.public class EvenNumbers {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 50; i += 2) {
+           if(i%2==0)
+          System.out.print(i + " ");
+        }
+    }
+}
+11.public class PrePostOperators {
+    public static void main(String[] args) {
+        int a = 5, b = 5;
+        int result = ++a - b--;
+        System.out.println("Result: " + result);
+    }
+}
+12.public class SquarePattern {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("*****");
+        }
+    }
+}
+13.public class Pattern {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+14.public class PyramidPattern {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+15.public class RightAlignedTriangle {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+16.public class FullPyramid {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+17.public class InvertedTriangle {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+18.public class DiamondPattern {
+    public static void main(String[] args) {
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+19.public class NumberTriangle {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + "*");
+            }
+            System.out.println();
+        }
+    }
+}
+20.public class ReverseNumberTriangle {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = n; i >= 1; i--) {
+            for (int j = n; j >= i; j--) {
+                System.out.print(j + "*");
+            }
+            System.out.println();
+        }
+    }
+}
+21.public class OddNumberPyramid {
+    public static void main(String[] args) {
+        int n = 5, num = 1;
+        for (int i = 1; i <= n; i++) {
+            num = 1;
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + "*");
+                num += 2;
+            }
+            System.out.println();
+        }
+    }
+}
+22.public class NumberPatterns {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+23.public class IncrementingTriangle {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+24.public class ConsecutiveNumbers {
+    public static void main(String[] args) {
+        int count = 1;
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(count++ + " ");
+            }
+            System.out.println();
+        }
+    }
+}
